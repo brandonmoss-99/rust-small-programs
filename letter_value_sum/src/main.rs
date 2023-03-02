@@ -11,12 +11,12 @@ impl Letters {
 
     /// Get the total value of all the characters' values
     fn lettersum(&self) -> usize {
-        let mut total: usize = 0;
+        let mut total = 0;
     
         match self.string.len() {
             0 => total,
             _ => {
-                let text: String = self.string.to_ascii_lowercase();
+                let text = self.string.to_ascii_lowercase();
     
                 /* For each character in the String, get the byte value of the unicode,
                 and remove 96 from it (where the alphabet starts in the unicode character
@@ -37,7 +37,7 @@ impl Letters {
         match self.string.len() {
             0 => total,
             _ => {
-                let text: String = self.string.to_ascii_lowercase();
+                let text = self.string.to_ascii_lowercase();
     
                 /* For each character in the String, get the byte value of the unicode,
                 and remove 96 from it (where the alphabet starts in the unicode character
@@ -47,7 +47,7 @@ impl Letters {
                     total += byte_val as isize;
                 }
     
-                total as isize * mult
+                total * mult
             }
         }
     }
